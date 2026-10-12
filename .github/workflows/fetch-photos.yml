@@ -2,7 +2,7 @@ name: Recherche photos libres
 on:
   push:
     branches: [medias-campagne]
-    paths: ['fetch/queries.txt']
+    paths: ['fetch/pexels.txt', 'fetch/queries.txt']
 permissions:
   contents: write
 jobs:
