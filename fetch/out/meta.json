@@ -1,0 +1,42 @@
+[
+ {
+  "query": "african businessman smiling suit",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "african woman smiling phone",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "african family new home",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "african man phone payment",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "african businesswoman laptop office",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "black businessmen handshake",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "senior african man smiling",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ },
+ {
+  "query": "modern apartment building africa",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "status": 401
+ }
+]
