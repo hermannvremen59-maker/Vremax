@@ -1,0 +1,23 @@
+name: Recherche photos libres
+on:
+  push:
+    branches: [medias-campagne]
+    paths: ['fetch/queries.txt']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: medias-campagne }
+      - name: Rechercher et telecharger (Unsplash, photos gratuites uniquement)
+        run: |
+          pip install pillow requests >/dev/null
+          python3 fetch/fetch.py
+      - name: Enregistrer
+        run: |
+          git config user.name "vremax-bot"; git config user.email "bot@vremaxx.com"
+          git add fetch/out
+          git commit -m "Photos libres recuperees" || echo rien
+          git push
