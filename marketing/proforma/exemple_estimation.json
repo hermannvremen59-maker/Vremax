@@ -1,0 +1,21 @@
+{
+  "numero": "EST-2026-V001",
+  "date": "13 octobre 2026",
+  "validite_jours": 30,
+  "type": "estimation",
+  "titre": "Logiciel de gestion sur mesure et application mobile",
+  "sous_titre": "Un outil unique, construit pour votre organisation",
+  "client": {"nom": "Groupe Exemple", "activite": "Groupe industriel", "ville": "Abidjan"},
+  "objet": "Conception et déploiement d'un logiciel de gestion sur mesure (ventes, stocks, production, tableaux de bord) avec application mobile pour les équipes terrain.",
+  "intro": "Sur la base des informations transmises, voici l'enveloppe budgétaire de votre projet. Elle sera affinée après une rencontre avec votre équipe.",
+  "fourchette": {"min": 12000000, "max": 16000000, "postes": [
+    ["Analyse et cadrage", "Rencontre sur place, étude de vos processus et de vos documents"],
+    ["Maquette", "Maquette interactive à valider avant tout développement"],
+    ["Développement", "Modules de gestion, rôles et droits, automatisations, tableaux de bord"],
+    ["Application mobile", "Pour les équipes terrain"],
+    ["Reprise des données", "Import de vos fichiers existants"],
+    ["Formation et déploiement", "Formation des utilisateurs, mise en service, accompagnement"]
+  ]},
+  "paiement": "selon l'échéancier défini dans la proforma définitive.",
+  "notes": []
+}

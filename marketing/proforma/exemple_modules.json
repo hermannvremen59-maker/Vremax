@@ -1,16 +1,20 @@
 {
   "numero": "PRO-2026-V001",
-  "date": "13/10/2026",
+  "date": "13 octobre 2026",
   "validite_jours": 30,
   "type": "modules",
-  "client": {"nom": "École Exemple", "ville": "Abidjan", "email": "contact@exemple.ci"},
-  "objet": "Logiciel de gestion scolaire VREMAX École",
+  "titre": "Logiciel de gestion scolaire VREMAX École",
+  "sous_titre": "Inscriptions, scolarité, notes et parents : toute votre école dans un seul outil",
+  "client": {"nom": "École Exemple", "activite": "Établissement scolaire privé", "ville": "Abidjan", "email": "contact@exemple.ci"},
+  "objet": "Mise en place du logiciel VREMAX École, adapté à vos règles, avec reprise de vos données et formation de vos équipes.",
+  "intro": "Reçus à la main, impayés difficiles à suivre, bulletins longs à préparer : VREMAX École automatise ce travail répétitif pour que votre équipe se concentre sur les élèves et les familles.",
   "formules": [
     {"nom": "Formule Essentielle", "prix": 900000, "abonnement_an": 120000,
      "lignes": ["Inscriptions et fiches élèves", "Frais, échéanciers et encaissements (espèces, Mobile Money)", "Reçus numérotés", "Impayés et relances en un clic", "Tableau de bord"]},
-    {"nom": "Formule Complète", "prix": 1400000, "abonnement_an": 150000,
+    {"nom": "Formule Complète", "prix": 1400000, "abonnement_an": 150000, "recommande": true,
      "lignes": ["Tout l'Essentiel", "Notes, bulletins et classements", "Présences et emploi du temps", "Portail parents et messages", "Examens, statistiques et fin d'année"]}
   ],
+  "recommandation": "la Formule Complète : toute la vie de l'école est gérée au même endroit, de l'inscription au bulletin.",
   "paiement": "70 % à la commande, 30 % à la livraison.",
   "notes": []
 }
