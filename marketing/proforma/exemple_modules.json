@@ -1,0 +1,16 @@
+{
+  "numero": "PRO-2026-V001",
+  "date": "13/10/2026",
+  "validite_jours": 30,
+  "type": "modules",
+  "client": {"nom": "École Exemple", "ville": "Abidjan", "email": "contact@exemple.ci"},
+  "objet": "Logiciel de gestion scolaire VREMAX École",
+  "formules": [
+    {"nom": "Formule Essentielle", "prix": 900000, "abonnement_an": 120000,
+     "lignes": ["Inscriptions et fiches élèves", "Frais, échéanciers et encaissements (espèces, Mobile Money)", "Reçus numérotés", "Impayés et relances en un clic", "Tableau de bord"]},
+    {"nom": "Formule Complète", "prix": 1400000, "abonnement_an": 150000,
+     "lignes": ["Tout l'Essentiel", "Notes, bulletins et classements", "Présences et emploi du temps", "Portail parents et messages", "Examens, statistiques et fin d'année"]}
+  ],
+  "paiement": "70 % à la commande, 30 % à la livraison.",
+  "notes": []
+}
