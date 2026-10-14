@@ -1,0 +1,33 @@
+name: Transcription voix off
+on:
+  push:
+    branches: [medias-campagne]
+    paths: ['fetch/audio/**']
+permissions:
+  contents: write
+jobs:
+  transcribe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: medias-campagne }
+      - name: Transcrire (faster-whisper, horodatage par mot)
+        run: |
+          pip install faster-whisper >/dev/null
+          python3 - <<'PY'
+          import json, glob, os
+          from faster_whisper import WhisperModel
+          m = WhisperModel('medium', device='cpu', compute_type='int8')
+          os.makedirs('fetch/out/transcripts', exist_ok=True)
+          for f in glob.glob('fetch/audio/*.mp3'):
+              segs, _ = m.transcribe(f, language='fr', word_timestamps=True)
+              out = [{'s': s.start, 'e': s.end, 't': s.text, 'w': [[w.start, w.end, w.word] for w in s.words]} for s in segs]
+              json.dump(out, open('fetch/out/transcripts/' + os.path.basename(f) + '.json', 'w'), ensure_ascii=False, indent=1)
+          PY
+      - name: Enregistrer
+        run: |
+          git config user.name "vremax-bot"; git config user.email "bot@vremaxx.com"
+          git pull --rebase origin medias-campagne || true
+          git add fetch/out/transcripts
+          git commit -m "Transcription voix off" || echo rien
+          git push
