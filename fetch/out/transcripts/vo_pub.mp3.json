@@ -1,0 +1,962 @@
+[
+ {
+  "s": 0.0,
+  "e": 6.76,
+  "t": " dirigeant, chef d'entreprise, commerçant, grossiste, importateur, professionnel du BTP, industriel,",
+  "w": [
+   [
+    0.0,
+    0.9,
+    " dirigeant,"
+   ],
+   [
+    0.92,
+    1.12,
+    " chef"
+   ],
+   [
+    1.12,
+    1.28,
+    " d"
+   ],
+   [
+    1.28,
+    1.88,
+    "'entreprise,"
+   ],
+   [
+    2.12,
+    2.7,
+    " commerçant,"
+   ],
+   [
+    2.92,
+    3.44,
+    " grossiste,"
+   ],
+   [
+    3.68,
+    4.34,
+    " importateur,"
+   ],
+   [
+    4.7,
+    5.0,
+    " professionnel"
+   ],
+   [
+    5.0,
+    5.2,
+    " du"
+   ],
+   [
+    5.2,
+    5.66,
+    " BTP,"
+   ],
+   [
+    6.36,
+    6.76,
+    " industriel,"
+   ]
+  ]
+ },
+ {
+  "s": 7.12,
+  "e": 11.66,
+  "t": " transporteur, promoteur immobilier et responsable d'établissement, et si votre entreprise",
+  "w": [
+   [
+    7.12,
+    7.64,
+    " transporteur,"
+   ],
+   [
+    7.94,
+    8.26,
+    " promoteur"
+   ],
+   [
+    8.26,
+    8.84,
+    " immobilier"
+   ],
+   [
+    8.84,
+    9.14,
+    " et"
+   ],
+   [
+    9.14,
+    9.66,
+    " responsable"
+   ],
+   [
+    9.66,
+    9.8,
+    " d"
+   ],
+   [
+    9.8,
+    10.38,
+    "'établissement,"
+   ],
+   [
+    10.7,
+    10.78,
+    " et"
+   ],
+   [
+    10.78,
+    10.98,
+    " si"
+   ],
+   [
+    10.98,
+    11.2,
+    " votre"
+   ],
+   [
+    11.2,
+    11.66,
+    " entreprise"
+   ]
+  ]
+ },
+ {
+  "s": 11.66,
+  "e": 15.16,
+  "t": " pouvait faire plus en passant moins de temps sur les tâches répétitives.",
+  "w": [
+   [
+    11.66,
+    11.9,
+    " pouvait"
+   ],
+   [
+    11.9,
+    12.2,
+    " faire"
+   ],
+   [
+    12.2,
+    12.56,
+    " plus"
+   ],
+   [
+    12.56,
+    12.86,
+    " en"
+   ],
+   [
+    12.86,
+    13.14,
+    " passant"
+   ],
+   [
+    13.14,
+    13.34,
+    " moins"
+   ],
+   [
+    13.34,
+    13.5,
+    " de"
+   ],
+   [
+    13.5,
+    13.64,
+    " temps"
+   ],
+   [
+    13.64,
+    13.82,
+    " sur"
+   ],
+   [
+    13.82,
+    14.02,
+    " les"
+   ],
+   [
+    14.02,
+    14.34,
+    " tâches"
+   ],
+   [
+    14.34,
+    15.16,
+    " répétitives."
+   ]
+  ]
+ },
+ {
+  "s": 15.6,
+  "e": 19.54,
+  "t": " Découvrez VREMAX, le logiciel intelligent de gestion d'entreprise qui connecte",
+  "w": [
+   [
+    15.6,
+    16.18,
+    " Découvrez"
+   ],
+   [
+    16.18,
+    16.82,
+    " VREMAX,"
+   ],
+   [
+    17.06,
+    17.26,
+    " le"
+   ],
+   [
+    17.26,
+    17.62,
+    " logiciel"
+   ],
+   [
+    17.62,
+    17.98,
+    " intelligent"
+   ],
+   [
+    17.98,
+    18.14,
+    " de"
+   ],
+   [
+    18.14,
+    18.44,
+    " gestion"
+   ],
+   [
+    18.44,
+    18.6,
+    " d"
+   ],
+   [
+    18.6,
+    19.0,
+    "'entreprise"
+   ],
+   [
+    19.0,
+    19.28,
+    " qui"
+   ],
+   [
+    19.28,
+    19.54,
+    " connecte"
+   ]
+  ]
+ },
+ {
+  "s": 19.54,
+  "e": 24.06,
+  "t": " vos opérations, automatise vos processus et vous aide à mieux piloter votre activité.",
+  "w": [
+   [
+    19.54,
+    19.74,
+    " vos"
+   ],
+   [
+    19.74,
+    20.34,
+    " opérations,"
+   ],
+   [
+    20.72,
+    21.04,
+    " automatise"
+   ],
+   [
+    21.04,
+    21.22,
+    " vos"
+   ],
+   [
+    21.22,
+    21.82,
+    " processus"
+   ],
+   [
+    21.82,
+    22.04,
+    " et"
+   ],
+   [
+    22.04,
+    22.24,
+    " vous"
+   ],
+   [
+    22.24,
+    22.4,
+    " aide"
+   ],
+   [
+    22.4,
+    22.68,
+    " à"
+   ],
+   [
+    22.68,
+    22.84,
+    " mieux"
+   ],
+   [
+    22.84,
+    23.2,
+    " piloter"
+   ],
+   [
+    23.2,
+    23.38,
+    " votre"
+   ],
+   [
+    23.38,
+    24.06,
+    " activité."
+   ]
+  ]
+ },
+ {
+  "s": 24.659999999999997,
+  "e": 29.020000000000003,
+  "t": " Comptabilité, vente, achat, stock, caisse, facturation et gestion administrative.",
+  "w": [
+   [
+    24.659999999999997,
+    25.2,
+    " Comptabilité,"
+   ],
+   [
+    25.46,
+    25.82,
+    " vente,"
+   ],
+   [
+    26.12,
+    26.5,
+    " achat,"
+   ],
+   [
+    26.78,
+    27.02,
+    " stock,"
+   ],
+   [
+    27.28,
+    27.58,
+    " caisse,"
+   ],
+   [
+    27.78,
+    28.32,
+    " facturation"
+   ],
+   [
+    28.32,
+    28.56,
+    " et"
+   ],
+   [
+    28.56,
+    28.92,
+    " gestion"
+   ],
+   [
+    28.92,
+    29.19,
+    " administrative."
+   ]
+  ]
+ },
+ {
+  "s": 29.96,
+  "e": 34.16,
+  "t": " Vos modules communiquent entre eux pour limiter les doubles saisies et faciliter le travail de",
+  "w": [
+   [
+    29.96,
+    30.18,
+    " Vos"
+   ],
+   [
+    30.18,
+    30.5,
+    " modules"
+   ],
+   [
+    30.5,
+    31.04,
+    " communiquent"
+   ],
+   [
+    31.04,
+    31.3,
+    " entre"
+   ],
+   [
+    31.3,
+    31.42,
+    " eux"
+   ],
+   [
+    31.42,
+    31.64,
+    " pour"
+   ],
+   [
+    31.64,
+    31.98,
+    " limiter"
+   ],
+   [
+    31.98,
+    32.2,
+    " les"
+   ],
+   [
+    32.2,
+    32.46,
+    " doubles"
+   ],
+   [
+    32.46,
+    32.82,
+    " saisies"
+   ],
+   [
+    32.82,
+    33.12,
+    " et"
+   ],
+   [
+    33.12,
+    33.56,
+    " faciliter"
+   ],
+   [
+    33.56,
+    33.76,
+    " le"
+   ],
+   [
+    33.76,
+    33.96,
+    " travail"
+   ],
+   [
+    33.96,
+    34.16,
+    " de"
+   ]
+  ]
+ },
+ {
+  "s": 34.16,
+  "e": 38.14,
+  "t": " vos équipes. Et ce n'est pas tout ! Grâce à l'intelligence artificielle de VREMAX,",
+  "w": [
+   [
+    34.16,
+    34.28,
+    " vos"
+   ],
+   [
+    34.28,
+    34.78,
+    " équipes."
+   ],
+   [
+    34.86,
+    34.96,
+    " Et"
+   ],
+   [
+    34.96,
+    35.14,
+    " ce"
+   ],
+   [
+    35.14,
+    35.32,
+    " n"
+   ],
+   [
+    35.32,
+    35.32,
+    "'est"
+   ],
+   [
+    35.32,
+    35.54,
+    " pas"
+   ],
+   [
+    35.54,
+    35.78,
+    " tout"
+   ],
+   [
+    35.78,
+    36.02,
+    " !"
+   ],
+   [
+    36.02,
+    36.36,
+    " Grâce"
+   ],
+   [
+    36.36,
+    36.48,
+    " à"
+   ],
+   [
+    36.48,
+    36.52,
+    " l"
+   ],
+   [
+    36.52,
+    36.94,
+    "'intelligence"
+   ],
+   [
+    36.94,
+    37.46,
+    " artificielle"
+   ],
+   [
+    37.46,
+    37.66,
+    " de"
+   ],
+   [
+    37.66,
+    38.14,
+    " VREMAX,"
+   ]
+  ]
+ },
+ {
+  "s": 38.54,
+  "e": 42.42,
+  "t": " exploitez plus intelligemment vos informations et découvrez de nouvelles possibilités pour",
+  "w": [
+   [
+    38.54,
+    38.86,
+    " exploitez"
+   ],
+   [
+    38.86,
+    39.14,
+    " plus"
+   ],
+   [
+    39.14,
+    39.62,
+    " intelligemment"
+   ],
+   [
+    39.62,
+    39.82,
+    " vos"
+   ],
+   [
+    39.82,
+    40.36,
+    " informations"
+   ],
+   [
+    40.36,
+    40.74,
+    " et"
+   ],
+   [
+    40.74,
+    41.12,
+    " découvrez"
+   ],
+   [
+    41.12,
+    41.34,
+    " de"
+   ],
+   [
+    41.34,
+    41.54,
+    " nouvelles"
+   ],
+   [
+    41.54,
+    42.18,
+    " possibilités"
+   ],
+   [
+    42.18,
+    42.42,
+    " pour"
+   ]
+  ]
+ },
+ {
+  "s": 42.42,
+  "e": 46.92,
+  "t": " simplifier votre gestion et accompagner vos décisions. Vos tâches répétitives prennent",
+  "w": [
+   [
+    42.42,
+    42.82,
+    " simplifier"
+   ],
+   [
+    42.82,
+    43.04,
+    " votre"
+   ],
+   [
+    43.04,
+    43.5,
+    " gestion"
+   ],
+   [
+    43.5,
+    43.8,
+    " et"
+   ],
+   [
+    43.8,
+    44.18,
+    " accompagner"
+   ],
+   [
+    44.18,
+    44.4,
+    " vos"
+   ],
+   [
+    44.4,
+    44.9,
+    " décisions."
+   ],
+   [
+    45.26,
+    45.5,
+    " Vos"
+   ],
+   [
+    45.5,
+    45.88,
+    " tâches"
+   ],
+   [
+    45.88,
+    46.6,
+    " répétitives"
+   ],
+   [
+    46.6,
+    46.92,
+    " prennent"
+   ]
+  ]
+ },
+ {
+  "s": 46.92,
+  "e": 51.1,
+  "t": " moins de place. Votre gestion gagne en cohérence et vous disposez de plus de temps",
+  "w": [
+   [
+    46.92,
+    47.16,
+    " moins"
+   ],
+   [
+    47.16,
+    47.38,
+    " de"
+   ],
+   [
+    47.38,
+    47.68,
+    " place."
+   ],
+   [
+    47.94,
+    48.24,
+    " Votre"
+   ],
+   [
+    48.24,
+    48.62,
+    " gestion"
+   ],
+   [
+    48.62,
+    48.86,
+    " gagne"
+   ],
+   [
+    48.86,
+    49.1,
+    " en"
+   ],
+   [
+    49.1,
+    49.54,
+    " cohérence"
+   ],
+   [
+    49.54,
+    49.78,
+    " et"
+   ],
+   [
+    49.78,
+    50.04,
+    " vous"
+   ],
+   [
+    50.04,
+    50.5,
+    " disposez"
+   ],
+   [
+    50.5,
+    50.66,
+    " de"
+   ],
+   [
+    50.66,
+    50.8,
+    " plus"
+   ],
+   [
+    50.8,
+    50.98,
+    " de"
+   ],
+   [
+    50.98,
+    51.1,
+    " temps"
+   ]
+  ]
+ },
+ {
+  "s": 51.1,
+  "e": 54.38,
+  "t": " pour développer votre entreprise. Quel que soit votre secteur d'activité,",
+  "w": [
+   [
+    51.1,
+    51.32,
+    " pour"
+   ],
+   [
+    51.32,
+    51.68,
+    " développer"
+   ],
+   [
+    51.68,
+    51.86,
+    " votre"
+   ],
+   [
+    51.86,
+    52.48,
+    " entreprise."
+   ],
+   [
+    52.82,
+    52.82,
+    " Quel"
+   ],
+   [
+    52.82,
+    53.02,
+    " que"
+   ],
+   [
+    53.02,
+    53.18,
+    " soit"
+   ],
+   [
+    53.18,
+    53.44,
+    " votre"
+   ],
+   [
+    53.44,
+    53.76,
+    " secteur"
+   ],
+   [
+    53.76,
+    53.92,
+    " d"
+   ],
+   [
+    53.92,
+    54.38,
+    "'activité,"
+   ]
+  ]
+ },
+ {
+  "s": 54.72,
+  "e": 57.94,
+  "t": " donnez une nouvelle dimension à votre organisation. VREMAX,",
+  "w": [
+   [
+    54.72,
+    55.02,
+    " donnez"
+   ],
+   [
+    55.02,
+    55.2,
+    " une"
+   ],
+   [
+    55.2,
+    55.42,
+    " nouvelle"
+   ],
+   [
+    55.42,
+    55.9,
+    " dimension"
+   ],
+   [
+    55.9,
+    56.2,
+    " à"
+   ],
+   [
+    56.2,
+    56.32,
+    " votre"
+   ],
+   [
+    56.32,
+    57.0,
+    " organisation."
+   ],
+   [
+    57.48,
+    57.94,
+    " VREMAX,"
+   ]
+  ]
+ },
+ {
+  "s": 58.14,
+  "e": 61.36,
+  "t": " l'intelligence et l'automatisation au service de votre gestion.",
+  "w": [
+   [
+    58.14,
+    58.28,
+    " l"
+   ],
+   [
+    58.28,
+    58.8,
+    "'intelligence"
+   ],
+   [
+    58.8,
+    59.02,
+    " et"
+   ],
+   [
+    59.02,
+    59.08,
+    " l"
+   ],
+   [
+    59.08,
+    59.82,
+    "'automatisation"
+   ],
+   [
+    59.82,
+    60.08,
+    " au"
+   ],
+   [
+    60.08,
+    60.38,
+    " service"
+   ],
+   [
+    60.38,
+    60.56,
+    " de"
+   ],
+   [
+    60.56,
+    60.72,
+    " votre"
+   ],
+   [
+    60.72,
+    61.36,
+    " gestion."
+   ]
+  ]
+ },
+ {
+  "s": 61.6,
+  "e": 64.42,
+  "t": " Découvrez toutes les fonctionnalités sur VREMAX.com",
+  "w": [
+   [
+    61.6,
+    62.08,
+    " Découvrez"
+   ],
+   [
+    62.08,
+    62.32,
+    " toutes"
+   ],
+   [
+    62.32,
+    62.52,
+    " les"
+   ],
+   [
+    62.52,
+    63.16,
+    " fonctionnalités"
+   ],
+   [
+    63.16,
+    63.4,
+    " sur"
+   ],
+   [
+    63.4,
+    63.9,
+    " VREMAX"
+   ],
+   [
+    63.9,
+    64.42,
+    ".com"
+   ]
+  ]
+ }
+]
