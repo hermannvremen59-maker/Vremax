@@ -29,8 +29,10 @@ if auto:
 <div style="font-size:11px;font-weight:bold;letter-spacing:2px;color:{JADE};text-transform:uppercase;margin-bottom:4px">Ce que VREMAX fait tout seul pour vous</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{rows}</table></td></tr></table>'''
 appel_h = f'''<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 22px"><tr><td style="background:{SOFT};border-left:4px solid {JADE};border-radius:0 8px 8px 0;padding:14px 18px;color:{JADE_D};font-size:15px;font-weight:bold;line-height:1.5">{E(appel)}</td></tr></table>''' if appel else ''
-btn = f'''<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 8px"><tr><td align="center" bgcolor="{JADE}" style="border-radius:28px;background:{JADE}">
-<a href="https://www.vremaxx.com" target="_blank" style="display:inline-block;padding:15px 34px;font-family:{FONT};font-size:16px;font-weight:bold;color:#FFFFFF;text-decoration:none;border-radius:28px">{E(bouton)} &nbsp;&rarr;</a></td></tr></table>
+# Pas de balise <a> : Gmail affiche un avertissement de redirection sur les liens HTML.
+# On écrit l'adresse en texte ; Gmail la rend cliquable lui-même (testé : ouverture directe).
+btn = f'''<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 8px"><tr><td align="center" bgcolor="{JADE}" style="border-radius:28px;background:{JADE};padding:14px 30px;font-family:{FONT};font-size:15px;font-weight:bold;color:#FFFFFF">
+{E(bouton)} &nbsp;&rarr;&nbsp; <span style="color:#FFFFFF">www.vremaxx.com</span></td></tr></table>
 <p style="margin:0 0 6px;text-align:center;font-size:12px;color:#6B776F">ou répondez simplement à cet email</p>'''
 stop_h = f'<p style="margin:10px 0 0;font-size:11px;color:#8FA197;line-height:1.5">Si vous ne souhaitez plus recevoir de message de ma part, répondez simplement STOP.</p>' if stop else ''
 
