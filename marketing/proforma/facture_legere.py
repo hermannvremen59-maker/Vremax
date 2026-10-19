@@ -1,6 +1,7 @@
 # Facture Digital-Ivoire en PDF LÉGER (polices standard non embarquées, images réduites),
 # même charte que facture.cjs — pour l'envoyer en pièce jointe d'e-mail.
 # Usage : python3 facture_legere.py spec.json sortie.pdf logo.png signature.png
+from reportlab import rl_config; rl_config.useA85 = 0
 import json, sys, io
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
