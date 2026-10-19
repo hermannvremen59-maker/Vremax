@@ -39,7 +39,7 @@ txt(M + 60, y - 27, 'COMMUNICATION MARKETING & GESTION', 7, color=GREY)
 txt(M + 60, y - 39, "Abidjan, Côte d'Ivoire", 7.5, color=GREY)
 txt(M + 60, y - 49, 'Tél : +225 05 74 99 96 75  •  hello@vremaxx.com  •  www.vremaxx.com', 7.5, color=GREY)
 rrect(W - M - 150, y - 56, 150, 58, 6, fill=NAVY)
-txt(W - M - 12, y - 18, 'FACTURE', 13, True, 'white', right=True)
+txt(W - M - 12, y - 18, spec.get('doc_label', 'FACTURE'), 13 if len(spec.get('doc_label', 'FACTURE')) < 10 else 11, True, 'white', right=True)
 txt(W - M - 12, y - 33, f"N° {spec['numero']}", 8.5, color='white', right=True)
 txt(W - M - 12, y - 46, f"Abidjan, le {spec['date']}", 8.5, color='white', right=True)
 y -= 66; c.setStrokeColor(NAVY); c.setLineWidth(2.5); c.line(M, y, W - M, y)
@@ -74,7 +74,7 @@ rows = [('Total à payer', F(tot), '#1F2A44')]
 if ac: rows.append((f"Acompte reçu le {spec['acompte']['date']}", '- ' + F(ac), GREEN))
 for lab, val, col in rows:
     y -= 24; rrect(bx, y, bw, 24, 0, fill='white', stroke=LINE); txt(bx + 12, y + 8, lab, 9.5, color=col); txt(bx + bw - 12, y + 8, val, 9.5, True, col, right=True)
-y -= 30; rrect(bx, y, bw, 30, 5, fill=RED); txt(bx + 12, y + 10, 'Reste à payer', 12, True, 'white'); txt(bx + bw - 12, y + 10, F(tot - ac), 12, True, 'white', right=True)
+y -= 30; rrect(bx, y, bw, 30, 5, fill=RED); txt(bx + 12, y + 10, spec.get('label_reste', 'Reste à payer'), 12, True, 'white'); txt(bx + bw - 12, y + 10, F(spec.get('montant_encadre', tot - ac)), 12, True, 'white', right=True)
 # conditions
 y -= 30; txt(M, y, 'CONDITIONS', 7.5, True, RED)
 for cnd in spec.get('conditions', []):
