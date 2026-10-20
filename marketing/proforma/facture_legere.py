@@ -63,10 +63,11 @@ y -= 26; txt(M, y, 'DÉTAIL DE LA FACTURE', 8.5, True, RED); c.setStrokeColor(LI
 y -= 30; c.setFillColor(NAVY); c.rect(M, y, W - 2 * M, 20, fill=1, stroke=0)
 txt(M + 10, y + 6.5, 'Désignation', 8.5, True, 'white'); txt(W - M - 10, y + 6.5, 'Montant', 8.5, True, 'white', right=True)
 for i, (a, b, m) in enumerate(spec['lignes']):
-    y -= 36
-    if i % 2: c.setFillColor(SOFT); c.rect(M, y, W - 2 * M, 36, fill=1, stroke=0)
-    txt(M + 10, y + 21, a, 9.5, True); txt(M + 10, y + 8, b, 8, color=GREY)
-    txt(W - M - 10, y + 21, F(m) if isinstance(m, (int, float)) else m, 9.5, right=True)
+    RH = spec.get('row_h', 36)
+    y -= RH
+    if i % 2: c.setFillColor(SOFT); c.rect(M, y, W - 2 * M, RH, fill=1, stroke=0)
+    txt(M + 10, y + RH - 15, a, 9.5, True); txt(M + 10, y + RH - 28, b, 8, color=GREY)
+    txt(W - M - 10, y + RH - 15, F(m) if isinstance(m, (int, float)) else m, 9.5, right=True)
     c.setStrokeColor(LINE); c.line(M, y, W - M, y)
 # totaux
 tot, ac = spec['total'], spec.get('acompte', {}).get('montant', 0)
