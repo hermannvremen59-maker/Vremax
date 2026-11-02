@@ -1,10 +1,12 @@
 import json, sys, os, html, datetime
-S = '/tmp/claude-0/-home-claude-vremax/f9f34287-da94-548e-8d92-9b3107858ebc/scratchpad/k30/'
+S = os.environ.get('AFF_S', '/tmp/claude-0/-home-claude-vremax/daa540af-8296-5e6c-b318-dbf12aee4708/scratchpad/aff/')
 sys.path.insert(0, S + 'gen')
 from data import DAYS
+MOD = {'caisse': 'CAISSE', 'stock': 'STOCK & ACHATS', 'logistique': 'LOGISTIQUE', 'comptabilite': 'COMPTABILITÉ'}
+MODN = {'caisse': 'VREMAX Caisse', 'stock': 'VREMAX Stock & Achats', 'logistique': 'VREMAX Logistique', 'comptabilite': 'VREMAX Comptabilité'}
 E = html.escape
 INK, PAPER, GOLD, JADE, MINT = '#14201A', '#F6F3EC', '#D9B44A', '#0F6B57', '#BFE8D9'
-F = '/home/claude/dossier/node_modules/@fontsource/'
+F = os.environ.get('AFF_FONTS', S + 'node_modules/@fontsource/')
 FF = ''.join(f"@font-face{{font-family:'Hanken Grotesk';font-weight:{w};src:url(file://{F}hanken-grotesk/files/hanken-grotesk-latin-{w}-normal.woff2)}}\n" for w in (400, 500, 600, 700, 800))
 FF += ''.join(f"@font-face{{font-family:'Fraunces';font-weight:{w};src:url(file://{F}fraunces/files/fraunces-latin-{w}-normal.woff2)}}\n" for w in (600, 700))
 
@@ -30,13 +32,13 @@ def headline(h, t, size):
     return (f'<h1 style="margin: 0; font-family: \'Fraunces\', serif; font-weight: 700; font-size: {size}px; line-height: 1.06; letter-spacing: -0.02em; color: {t["fg"]}; text-shadow: {sh}">{E(a)}'
             + (f'<br><span style="color: {t["hl"]}">{E(b)}</span>' if b else '') + '</h1>')
 
-def header(t, src):
+def header(t, src, mod='comptabilite'):
     pill_bg, pill_fg = (INK, GOLD) if t['bg'] == GOLD else (GOLD, INK)
     name = INK if t['bg'] in (GOLD, PAPER) else '#FFFFFF'
     return f'''<div style="display: flex; align-items: center; gap: 13px; flex: none">
 <img src="{src('logo')}" alt="Logo VREMAX" style="width: 54px; height: 54px; border-radius: 12px; display: block">
 <div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 30px; letter-spacing: 0.2em; color: {name}">VREMAX</div>
-<div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; letter-spacing: 0.14em; color: {pill_fg}; background: {pill_bg}; border-radius: 9px; padding: 6px 13px 5px 15px; line-height: 1">COMPTABILITÉ</div>
+<div style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; letter-spacing: 0.14em; color: {pill_fg}; background: {pill_bg}; border-radius: 9px; padding: 6px 13px 5px 15px; line-height: 1">{E(MOD[mod])}</div>
 </div>'''
 
 def kicker(k, t):
@@ -95,12 +97,12 @@ def board(d, src, photos):
         pos = d.get('pos', 'left top')
         inner = textblock(d, t, 952) + f'''
 <div style="flex: 1; min-height: 0; margin: 6px 20px -8px; background: #0B110E; border-radius: 18px 18px 0 0; padding: 10px 10px 0; box-sizing: border-box; transform: perspective(1400px) rotateX(14deg) rotateY(-10deg); transform-origin: 50% 100%; box-shadow: 8px 8px 0 #05110C, 14px 14px 0 rgba(5,17,12,0.6), 30px 40px 60px rgba(0,0,0,0.45)">
-<img src="{src(d['img'])}" alt="Capture de VREMAX Comptabilité : {E(d['k'])}" style="width: 100%; height: 100%; object-fit: cover; object-position: {pos}; border-radius: 10px 10px 0 0; display: block">
+<img src="{src(d['img'])}" alt="Capture de {MODN[d.get("mod","comptabilite")]} : {E(d['k'])}" style="width: 100%; height: 100%; object-fit: cover; object-position: {pos}; border-radius: 10px 10px 0 0; display: block">
 </div>'''
     elif L == 'doc':
         inner = textblock(d, t, 952) + f'''
 <div style="flex: 1; min-height: 0; display: flex; justify-content: center; margin-bottom: -8px">
-<img src="{src(d['img'])}" alt="Document généré par VREMAX Comptabilité" style="height: 100%; width: 860px; object-fit: cover; object-position: top; border-radius: 12px 12px 0 0; display: block; box-shadow: 10px 10px 0 rgba(0,0,0,0.25), 30px 40px 60px rgba(0,0,0,0.45); transform: perspective(1400px) rotateX(12deg) rotateY(12deg) rotateZ(-2deg); transform-origin: 50% 100%">
+<img src="{src(d['img'])}" alt="Document généré par {MODN[d.get("mod","comptabilite")]}" style="height: 100%; width: 860px; object-fit: cover; object-position: top; border-radius: 12px 12px 0 0; display: block; box-shadow: 10px 10px 0 rgba(0,0,0,0.25), 30px 40px 60px rgba(0,0,0,0.45); transform: perspective(1400px) rotateX(12deg) rotateY(12deg) rotateZ(-2deg); transform-origin: 50% 100%">
 </div>'''
     elif L == 'compare':
         li = lambda xs, mark, col: ''.join(f'<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: {col}; color: #FFFFFF; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center">{mark}</div><div style="font-size: 21px; line-height: 1.3; font-weight: 600">{E(x)}</div></div>' for x in xs)
@@ -136,11 +138,11 @@ def board(d, src, photos):
         ring = GOLD if t['bg'] != JADE else MINT
         if key.startswith('f'):
             art = f'''<div style="position: absolute; right: 50px; top: 150px; width: 470px; height: 700px; border-radius: 28px; background: {ring}; transform: perspective(1400px) rotateY(-14deg) rotateX(4deg) translate(22px, 22px); opacity: 0.9"></div>
-<div style="position: absolute; right: 64px; top: 140px; width: 470px; height: 700px; border-radius: 28px; overflow: hidden; transform: perspective(1400px) rotateY(-14deg) rotateX(4deg); box-shadow: 30px 40px 60px rgba(0,0,0,0.45)"><img src="{src(key)}" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>'''
+<div style="position: absolute; right: 64px; top: 140px; width: 470px; height: 700px; border-radius: 28px; overflow: hidden; transform: perspective(1400px) rotateY(-14deg) rotateX(4deg); box-shadow: 30px 40px 60px rgba(0,0,0,0.45)"><img src="{src(key)}" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: {d.get('ppos', 'center')}; display: block"></div>'''
         else:
             art = f'''<div style="position: absolute; right: -90px; bottom: 60px; width: 640px; height: 640px; border-radius: 50%; background: {ring}; box-shadow: inset -30px -40px 0 rgba(0,0,0,0.18), 0 40px 70px rgba(0,0,0,0.35)"></div>
 <img src="{src(key)}" alt="" style="position: absolute; right: -50px; bottom: 92px; height: 740px; max-width: 560px; object-fit: contain; object-position: right bottom; display: block; filter: drop-shadow(18px 24px 0 rgba(0,0,0,0.18)) drop-shadow(0 30px 40px rgba(0,0,0,0.35))">'''
-        return shell(t, src, text, extra=art)
+        return shell(t, src, text, extra=art, mod=d.get('mod', 'comptabilite'))
     else:  # statement
         s = min(hsize(d['h'], 952, 84) + 4, 88)
         extra = ''
@@ -151,13 +153,13 @@ def board(d, src, photos):
         inner = f'''<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px; padding-bottom: 20px">
 {kicker(d['k'], t)}{headline(d['h'], t, s)}
 <p style="margin: 0; font-size: 26px; line-height: 1.42; color: {t['sub']}; max-width: 900px">{E(nb(d['s']))}</p>{extra}</div>'''
-    return shell(t, src, inner)
+    return shell(t, src, inner, mod=d.get('mod', 'comptabilite'))
 
-def shell(t, src, inner, extra=''):
+def shell(t, src, inner, extra='', mod='comptabilite'):
     return f'''<div style="width: 1080px; height: 1080px; position: relative; overflow: hidden; background: {t['bg']}; font-family: 'Hanken Grotesk', sans-serif; color: {t['fg']}">
 {deco(t)}{extra}
 <div style="position: absolute; inset: 0; box-sizing: border-box; padding: 48px 64px 0; display: flex; flex-direction: column; gap: 24px">
-{header(t, src)}
+{header(t, src, mod)}
 {inner}
 {footer(t)}
 </div>
@@ -175,5 +177,5 @@ if __name__ == '__main__':
         n = i + 1
         if only and str(n) not in only: continue
         body = board(d, lsrc, photos)
-        open(f'{S}render/Jour{n:02d}.html', 'w').write(f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>{FF}body{{margin:0}}</style></head><body>{body}</body></html>')
+        open(f'{S}render/' + d.get('file', f'Jour{n:02d}') + '.html', 'w').write(f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>{FF}body{{margin:0}}</style></head><body>{body}</body></html>')
     print('ok')
